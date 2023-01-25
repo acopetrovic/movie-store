@@ -8,14 +8,13 @@
                  [uncomplicate/neanderthal "0.45.0"]
                  [ring/ring-jetty-adapter "1.9.6"]
                  [hiccup "1.0.5"]]
-  :profiles {:dev
-             {:dependencies [[midje "1.10.9"]
-                             [criterium "0.4.5"]]
-              :plugins      [[lein-midje "3.2.1"]]}}
-  :repl-options {:init-ns movie-store.core}
-  ;:main ^:skip-aot movie-store.core
-  ;:target-path "target/%s"
-  ;:profiles
-  ;  {:uberjar {:aot      :all
-  ;:jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
+  :dev
+    {:dependencies [[midje "1.10.9"]]
+     :plugins      [[lein-midje "3.2.1"]]}
+
+  :main ^:skip-aot movie-store.core
+  :target-path "target/%s"
+  :profiles
+    {:uberjar {:aot      :all
+  :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
   )
