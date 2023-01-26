@@ -5,9 +5,11 @@
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [compojure "1.7.0"]
+                 [ring "1.8.1"]
                  [uncomplicate/neanderthal "0.45.0"]
                  [ring/ring-jetty-adapter "1.9.6"]
-                 [hiccup "1.0.5"]]
+                 [hiccup "1.0.5"]
+                 [org.webjars/bootstrap "4.6.1"]]
   :dev
     {:dependencies [[midje "1.10.9"]]
      :plugins      [[lein-midje "3.2.1"]]}

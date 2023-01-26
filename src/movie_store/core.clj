@@ -20,7 +20,9 @@
   <!DOCTYPE html>
   <html>
   <head>
+  <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">
     <title>Movie Store</title>
+    <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">
      </head>
   <body>
     <h1>Movie Title</h1>
@@ -36,11 +38,14 @@
     <h2>Director</h2>
     <p>Director's name</p>
     <h2>Release Date</h2>
+    <h3 style=\"color:blue;\">A Blue Heading</h3>
     <p>The movie's release date</p>
-    <h1>Total price of all movies is %f</h1>
+    <button class=\"btn btn-primary\">Click me</button>
+    <h1>Total price of all movies is</h1>
   </body>
   </html>" data)))
 (total-price-view 30)
+
 
 ;(defn handler [request]
 ;(case (:uri request)
@@ -50,7 +55,26 @@
 ; :body    (total-price-view 30)} ) )
 (total-price-view (total-price movies))
 
-(defroutes handler
-           (GET "/price" [] (total-price-view (total-price movies))))
+(defn bootstrap-handler [request]
+  {:status  200
+   :headers {"Content-Type" "text/html"}
+   :body    (html [:head [:link {:rel "stylesheet" :href "{{webjars/path \"bootstrap/4.6.1/css/bootstrap.min.css\"}}"}]
+                   [:link {:rel "stylesheet" :href "~/css/site.css"}]
+                   [:link {:rel "stylesheet" :href "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"}]
+                   [:body [:nav [:label {:class "logo"} "eTickets"
+                                 [:ul [:li [:a {:href "#"}] "Home"]
+                                      [:li [:a {:href "#"}] "About"]]]]
+                    [:p "working!"]]])})
 
-(jetty/run-jetty (fn [req] (handler req)) {:port 4001 :join? false})
+
+
+
+
+(defroutes handler
+           (GET "/price" [] (total-price-view (total-price movies)))
+           (GET "/bootstrap" [] bootstrap-handler))
+
+
+
+
+(jetty/run-jetty (fn [req] (handler req)) {:port 4002 :join? false})
