@@ -9,6 +9,8 @@
             [movie-store.actors :as actor]
             [movie-store.producers :as producer]
             [movie-store.cinemas :as cinema]
+            [clojure.java.jdbc :as jdbc]
+
             ))
 
 (def movies [{:id 1 :title "The Shawshank Redemption" :price 10.99}
@@ -138,3 +140,14 @@
 
 
 (jetty/run-jetty (fn [req] (handler req)) {:port 4003 :join? false})
+
+(def mysql-db {
+               :subprotocol "mysql"
+               :subname "//localhost:3306/clojure_db_taskassign"
+               :user "root"
+               :password ""
+               :zeroDateTimeBehaviour "convertToNull"
+               })
+
+
+
