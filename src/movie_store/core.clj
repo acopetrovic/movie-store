@@ -143,7 +143,7 @@
 
 (def mysql-db {
                :subprotocol "mysql"
-               :subname "//localhost:3306/clojure_db_taskassign"
+               :subname "//localhost:3306/clojure_ecommerce"
                :user "root"
                :password ""
                :zeroDateTimeBehaviour "convertToNull"
