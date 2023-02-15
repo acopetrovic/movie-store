@@ -43,3 +43,21 @@ values (1,'http://dotnethow.net/images/cinemas/cinema-1.jpeg','Cinema 1','This i
        (3,'http://dotnethow.net/images/cinemas/cinema-3.jpeg','Cinema 3','This is the description of the third cinema'),
        (4,'http://dotnethow.net/images/cinemas/cinema-4.jpeg','Cinema 4','This is the description of the fourth cinema'),
        (5,'http://dotnethow.net/images/cinemas/cinema-5.jpeg','Cinema 5','This is the description of the five cinema');
+
+DROP TABLE IF EXISTS `producers`;
+
+CREATE TABLE `producers` (
+    `Id` int (11) NOT NULL AUTO_INCREMENT,
+    `ProfilePictureURL` varchar (255) NULL,
+    `FullName`          varchar (255) NULL,
+    `Bio`               varchar (255) NULL,
+    PRIMARY KEY (`Id`)
+);
+/*Data for the table `producers`*/
+
+insert into `producers` (`Id`,`ProfilePictureURL`,`FullName`,`Bio`)
+values (1,'http://dotnethow.net/images/producers/producer-5.jpeg','Producer 5','This is the Bio of the five producer'),
+       (2,'http://dotnethow.net/images/producers/producer-4.jpeg','Producer 4','This is the Bio of the fourth producer'),
+       (3,'http://dotnethow.net/images/producers/producer-3.jpeg','Producer 3','This is the Bio of the third producer'),
+       (4,'http://dotnethow.net/images/producers/producer-2.jpeg','Producer 2','This is the Bio of the second producer'),
+       (5,'http://dotnethow.net/images/producers/producer-1.jpeg','Producer 1','This is the Bio of the first producer');
