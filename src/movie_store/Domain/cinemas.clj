@@ -1,6 +1,7 @@
-(ns movie-store.actors
+(ns movie-store.Domain.cinemas
   (:require [hiccup.core :refer [html]]))
-(defn actor-handler [request]
+
+(defn cinema-handler [request]
   {:status  200
    :headers {"Content-Type" "text/html"}
    :body    (html [:head [:link {:rel "stylesheet" :href "{{webjars/path \"bootstrap/4.6.1/css/bootstrap.min.css\"}}"}]
@@ -22,15 +23,15 @@
                       [:table {:style "margin:25px 0;border-collapse:collapse;width:80%;text-align:center;border-top:1px solid #e0e0d1;border-bottom:1px solid #e0e0d1;margin-left:auto;margin-right:auto"}
                        [:thead {:style "border-bottom:1px solid #e0e0d1"}
                         [:tr {:style "padding:20px;"}
-                         [:th [:h3 "Profile Picture"]]
-                         [:th [:h3 "Full Name"]]
-                         [:th [:h3 "Biography"]]
+                         [:th [:h3 "Cinema Logo"]]
+                         [:th [:h3 "Cinema Name"]]
+                         [:th [:h3 "Description"]]
                          [:th [:h3 "Actions"]]]]
                        [:tbody
                         [:tr {:style "font-size:18px"}
-                         [:td [:img.rounded-circle {:style "max-width:200px;clip-path:circle()" :src "http://dotnethow.net/images/actors/actor-1.jpeg" :alt "Actor 1"}]]
-                         [:td "Actor 1"]
-                         [:td "This is the biography of first actor"]
+                         [:td [:img.rounded-circle {:style "max-width:200px;clip-path:circle()" :src "http://dotnethow.net/images/cinemas/cinema-1.jpeg" :alt "Actor 1"}]]
+                         [:td "Cinema 1"]
+                         [:td "This is the description of the first cinema"]
                          [:td
                           [:a {:style "padding:7px 13px;border-radius:7px;margin:0 5px;border:0.5px solid" :href "/Edit" :asp-action "Edit" } [:i.bi.bi-pencil-square] "Edit"]
                           [:a {:style "padding:7px 13px;border-radius:7px;margin:0 5px;border:0.5px solid" :href "/Details" :asp-action "Details" } [:i.bi.bi-eye] "Details"]

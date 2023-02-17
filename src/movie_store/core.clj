@@ -6,9 +6,10 @@
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
             [ring.adapter.jetty :refer [run-jetty] :as jetty]
             [ring.util.response :as response]
-            [movie-store.actors :as actor]
-            [movie-store.producers :as producer]
-            [movie-store.cinemas :as cinema]
+            [movie-store.Domain.actors :as actor]
+            [movie-store.Domain.producers :as producer]
+            [movie-store.Domain.cinemas :as cinema]
+            [movie-store.Controller.controller :as controller]
             [clojure.java.jdbc :as jdbc]
 
             ))
@@ -134,7 +135,9 @@
            (GET "/movies" [] movie-handler)
            (GET "/actors" [] actor/actor-handler)
            (GET "/producers" [] producer/producer-handler)
-           (GET "/cinemas" [] cinema/cinema-handler))
+           (GET "/cinemas" [] cinema/cinema-handler)
+           (GET "/index" [] (controller/index))
+           (route/resources "/"))
 
 
 

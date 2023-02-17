@@ -9,6 +9,7 @@
                  [uncomplicate/neanderthal "0.45.0"]
                  [org.clojure/java.jdbc "0.7.8"]
                  [mysql/mysql-connector-java "5.1.6"]
+                 [de.ubercode.clostache/clostache "1.4.0"]
                  [ring/ring-jetty-adapter "1.9.6"]
                  [hiccup "1.0.5"]
                  [org.webjars/bootstrap "4.6.1"]]

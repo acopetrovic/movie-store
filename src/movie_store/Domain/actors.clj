@@ -1,6 +1,8 @@
-(ns movie-store.producers
+(ns movie-store.Domain.actors
   (:require [hiccup.core :refer [html]]))
-(defn producer-handler [request]
+
+
+(defn actor-handler [request]
   {:status  200
    :headers {"Content-Type" "text/html"}
    :body    (html [:head [:link {:rel "stylesheet" :href "{{webjars/path \"bootstrap/4.6.1/css/bootstrap.min.css\"}}"}]
@@ -28,9 +30,9 @@
                          [:th [:h3 "Actions"]]]]
                        [:tbody
                         [:tr {:style "font-size:18px"}
-                         [:td [:img.rounded-circle {:style "max-width:200px;clip-path:circle()" :src "http://dotnethow.net/images/producers/producer-1.jpeg" :alt "Actor 1"}]]
-                         [:td "Producer 1"]
-                         [:td "This is the biography of first producer"]
+                         [:td [:img.rounded-circle {:style "max-width:200px;clip-path:circle()" :src "http://dotnethow.net/images/actors/actor-1.jpeg" :alt "Actor 1"}]]
+                         [:td "Actor 1"]
+                         [:td "This is the biography of first actor"]
                          [:td
                           [:a {:style "padding:7px 13px;border-radius:7px;margin:0 5px;border:0.5px solid" :href "/Edit" :asp-action "Edit" } [:i.bi.bi-pencil-square] "Edit"]
                           [:a {:style "padding:7px 13px;border-radius:7px;margin:0 5px;border:0.5px solid" :href "/Details" :asp-action "Details" } [:i.bi.bi-eye] "Details"]
