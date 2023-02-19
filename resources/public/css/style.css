@@ -90,6 +90,16 @@ z-index: 1000001;
 display: none;
 }
 
+.btn{
+padding: 0.7rem 1.4rem;
+background: var(--main-color);
+color: var(--bg-color);
+font-weight: 400;
+border-radius: 0.5rem;
+}
+.btn:hover{
+background: #fa1216
+}
 .conatiner{
 width: 100%;
 min-height:640px;
