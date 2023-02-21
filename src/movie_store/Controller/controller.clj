@@ -12,3 +12,6 @@
 
 (defn index []
   (render-template "index" {}))
+
+(defn movie []
+  (render-template "homepage" {}))

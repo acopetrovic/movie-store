@@ -132,12 +132,15 @@
 
 
 (defroutes handler
-           (GET "/movies" [] movie-handler)
-           (GET "/actors" [] actor/actor-handler)
-           (GET "/producers" [] producer/producer-handler)
-           (GET "/cinemas" [] cinema/cinema-handler)
+           ;(GET "/movies" [] movie-handler)
+           ;(GET "/actors" [] actor/actor-handler)
+           ;(GET "/producers" [] producer/producer-handler)
+           ;(GET "/cinemas" [] cinema/cinema-handler)
            (GET "/index" [] (controller/index))
-           (route/resources "/"))
+           (route/resources "/")
+           (GET "/movie" [] (controller/movie))
+           (route/resources "/")
+           )
 
 
 
