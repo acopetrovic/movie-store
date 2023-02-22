@@ -411,3 +411,10 @@ padding: 7px;
 height: 240px;
 }
 }
+/* MOVIES */
+.col-md-4 .col-xs-6{
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+ }

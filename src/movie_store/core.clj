@@ -138,8 +138,10 @@
            ;(GET "/cinemas" [] cinema/cinema-handler)
            (GET "/index" [] (controller/index))
            (route/resources "/")
-           (GET "/movie" [] (controller/movie))
+           (GET "/movies" [] (controller/AllMovies))
            (route/resources "/")
+           ;(GET "/homepage" [] (controller/allMovies))
+           ;(route/resources "/")
            )
 
 
@@ -147,13 +149,7 @@
 
 (jetty/run-jetty (fn [req] (handler req)) {:port 4003 :join? false})
 
-(def mysql-db {
-               :subprotocol "mysql"
-               :subname "//localhost:3306/clojure_ecommerce"
-               :user "root"
-               :password ""
-               :zeroDateTimeBehaviour "convertToNull"
-               })
+
 
 
 

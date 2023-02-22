@@ -1,5 +1,6 @@
 (ns movie-store.Controller.controller
-  (:require [clostache.parser :as clostache]))
+  (:require [clostache.parser :as clostache]
+            [movie-store.Domain.movies :as movies-domain]))
 
 (defn read-template [template-name]
   (slurp (clojure.java.io/resource
@@ -13,5 +14,9 @@
 (defn index []
   (render-template "index" {}))
 
-(defn movie []
-  (render-template "homepage" {}))
+(defn AllMovies []
+  (render-template "movie" {:movies (movies-domain/allMovies)}))
+
+;(defn allMovies []
+;(render-template "homepage" {:movies (movies-domain/allMovies)
+;               }) )

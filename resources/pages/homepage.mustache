@@ -24,25 +24,29 @@
                     <div class="col-md-12">
                         <div class="card-header text-white bg-info">
                             <p class="card-text">
-                            <h5 class="card-title">Ghost
+                            {{#movies}}
+                            <h5 class="card-title">
 
 
-                                <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                <a class="text-white float-right">{{name}}<i class="bi bi-pencil-square"></i></a>
                             </h5>
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="img/Ghost.png" width="100%" alt="">
+                        <img src="{{imageurl}}" width="100%" alt="">
+
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
-                            <p class="card-text">dgdfg</p>
-                            <p class="card-text"><b>Cinema: </b>gj</p>
-                            <p class="card-text"><b>Category: </b>df</p>
-                            <p class="card-text"><b>Start Date: </b>df</p>
-                            <p class="card-text"><b>End Date: </b>dfg</p>
+
+                            <p class="card-text">{{description}}</p>
+                            <p class="card-text"><b>Cinema: </b>{{cinemaid}}</p>
+                            <p class="card-text"><b>Category: </b>{{moviecategory}}</p>
+                            <p class="card-text"><b>Start Date: </b>{{startdate}}</p>
+                            <p class="card-text"><b>End Date: </b>{{enddate}}</p>
                             <p class="card-text ">
+
                                 <b>Status: </b>
 
                                 <span class="badge bg-success text-white">AVAILABLE</span>
@@ -61,8 +65,9 @@
                                     <i class="bi bi-eye-fill"></i> Show Details
                                 </a>
 
-                                <i class="bi bi-cart-plus"></i> Add to Cart
+                                <i class="bi bi-cart-plus"></i> Add to Cart({{price}})
                                 </a>
+                            {{/movies}}
                             </p>
                         </div>
                     </div>
@@ -73,6 +78,5 @@
     </div>
 <script src="../js/main.js"></script>
 <script src="../js/jquery.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/main.js"></script>
+
 
