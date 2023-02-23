@@ -17,5 +17,7 @@
 (defn allMovies []
   (jdbc/query mysql-db
               ["SELECT * FROM movies m"]))
-
-(println (allMovies))
+(defn home []
+  (jdbc/query mysql-db
+              ["SELECT * FROM movies m"]))
+;(println (allMovies))

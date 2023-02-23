@@ -17,6 +17,5 @@
 (defn AllMovies []
   (render-template "movie" {:movies (movies-domain/allMovies)}))
 
-;(defn allMovies []
-;(render-template "homepage" {:movies (movies-domain/allMovies)
-;               }) )
+(defn home []
+  (render-template "homepage" {:movies (movies-domain/home)}) )

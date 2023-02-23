@@ -140,8 +140,8 @@
            (route/resources "/")
            (GET "/movies" [] (controller/AllMovies))
            (route/resources "/")
-           ;(GET "/homepage" [] (controller/allMovies))
-           ;(route/resources "/")
+           (GET "/homepage" [] (controller/home))
+           (route/resources "/")
            )
 
 
