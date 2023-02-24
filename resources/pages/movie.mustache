@@ -7,7 +7,7 @@
     <title>eTickets</title>
     <link href="">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://github.com/twbs/bootstrap.git">
+
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- Link Swiper's CSS -->
@@ -30,18 +30,28 @@
     </ul>
 
 </header>
-
-<section>
-    <div class="movie-card" id="movies">
-        <div class="movie-img">
+<!--Movies-->
+<section class="coming" id="movies">
+    <h2 class="heading1">Available Movies</h2>
+    <!--Coming container-->
+    <div class="coming-container swiper">
+        <div class="swiper-wrapper">
+            <!--Box 1-->
             {{#movies}}
-            <img src="{{imageurl}}">
-        </div>
-        <div class="card-body">
-            <h2 class="movie-title">{{name}}</h2>
-            <p class="movie-intro">{{description}}</p>
+            <div class="swiper-slide box">
+
+                <div class="box-img">
+                    <img src="{{imageurl}}">
+                </div>
+                <h3>{{name}}</h3>
+                <span><a href="#" class="btn"><i class='bx bxs-cart-add'></i>Add to Cart</a> | <p>{{moviecategory}}</p></span>
+
+            </div>
             {{/movies}}
+
+
         </div>
+
     </div>
 </section>
 <!-- Coming soon -->
