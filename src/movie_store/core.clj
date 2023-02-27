@@ -142,6 +142,8 @@
            (route/resources "/")
            (GET "/homepage" [] (controller/home))
            (route/resources "/")
+           (GET "/actor" [] (controller/Actor))
+           (route/resources "/")
            )
 
 

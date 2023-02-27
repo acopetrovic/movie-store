@@ -250,11 +250,12 @@ background:#000;
 backdrop-filter:blur(5px);
 border-radius: 15px;
 color:#fff;
-padding:30px;
+padding:10px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 }
+
 .box-img{
 overflow:hidden;
 }
@@ -549,4 +550,17 @@ font-size: 1.2rem;
 font-weightL 500;
 text-transform: uppercase;
 border-bottom: 1px solid var(--main-color);
+}
+.title{
+color:var(--text-color);
+}
+.table{
+margin:25px 0;
+border-collapse:collapse;
+width:80%;
+text-align:center;
+border-top:1px solid #e0e0d1;
+border-bottom:1px solid #e0e0d1;
+margin-left:auto;
+margin-right:auto;
 }

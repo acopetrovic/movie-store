@@ -24,7 +24,7 @@
     <ul class="navbar">
         <li><a href="/index">Home</a></li>
         <li><a href="/movies" class="home-active">Movies</a></li>
-        <li><a href="/homepage">Actors</a></li>
+        <li><a href="/actor">Actors</a></li>
         <li><a href="#home">Producers</a></li>
         <li><a href="">Cinemas</a></li>
     </ul>
@@ -32,26 +32,29 @@
 </header>
 <!--Movies-->
 <section class="coming" id="movies">
-    <h2 class="heading1">Available Movies</h2>
+    <h2 class="heading1">Available Movies <i class='bx bxs-cart-add' style="float:right"></i></h2>
+
     <!--Coming container-->
     <div class="coming-container swiper">
         <div class="swiper-wrapper">
             <!--Box 1-->
             {{#movies}}
+
             <div class="swiper-slide box">
 
                 <div class="box-img">
                     <img src="{{imageurl}}">
                     <div class="card-body">
-                        <h1 class="card-title">Title:{{name}}</h1>
+                        <h2 class="card-title">Title:{{name}}</h2>
                         <p class="card-sub-title">Description:{{description}}</p>
-
                     </div>
                 </div>
                 <h3>{{name}}</h3>
-                <span><a href="#" class="btn"><i class='bx bxs-cart-add'></i>Add to Cart</a> | <p>{{moviecategory}}</p></span>
+                <div>
+                    <a href="#" class="btn"><i class='bx bxs-cart-add'></i>Add to Cart</a> | <p>Price:{{price}}$</p></div>
 
             </div>
+
             {{/movies}}
 
 
