@@ -25,8 +25,8 @@
         <li><a href="/index">Home</a></li>
         <li><a href="/movies" class="home-active">Movies</a></li>
         <li><a href="/actor">Actors</a></li>
-        <li><a href="#home">Producers</a></li>
-        <li><a href="">Cinemas</a></li>
+        <li><a href="/producer">Producers</a></li>
+        <li><a href="/cinema">Cinemas</a></li>
     </ul>
 
 </header>
@@ -43,11 +43,16 @@
             <div class="swiper-slide box">
 
                 <div class="box-img">
+
                     <img src="{{imageurl}}">
                     <div class="card-body">
-                        <h2 class="card-title">Title:{{name}}</h2>
-                        <p class="card-sub-title">Description:{{description}}</p>
+                        <p style="font-size:10px">Category: {{moviecategory}}</p>
+                        <p style="font-size:10px">Description: {{description}}</p>
+                        <p style="font-size:10px">Start Date: {{startdate}}</p>
+                        <p style="font-size:10px">End Date: {{enddate}}</p>
+
                     </div>
+
                 </div>
                 <h3>{{name}}</h3>
                 <div>

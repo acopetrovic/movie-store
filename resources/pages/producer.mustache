@@ -23,8 +23,8 @@
     <ul class="navbar">
         <li><a href="/index">Home</a></li>
         <li><a href="/movies">Movies</a></li>
-        <li><a href="/actor" class="home-active">Actors</a></li>
-        <li><a href="/producer">Producers</a></li>
+        <li><a href="/actor">Actors</a></li>
+        <li><a href="/producer" class="home-active">Producers</a></li>
         <li><a href="/cinema">Cinemas</a></li>
     </ul>
 
@@ -33,32 +33,32 @@
     <div class="row">
         <table class="table" >
             <thead style="border-bottom:1px solid #e0e0d1">
-                <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Biography</th>
-                    <th>Actions</th>
-                </tr>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Biography</th>
+                <th>Actions</th>
+            </tr>
             </thead>
             <tbody>
-{{#actors}}
-            <tr style="border-bottom:1px solid #e0e0d1">
-                <td>
-                    <img class="rounded-circle" src="{{profilepictureurl}}" style="clip-path:circle()">
-                </td>
-                <td>{{fullname}}</td>
-                <td>{{bio}}</td>
-                <td>
-                    <a href="/edit/{{id}}" class="btn"><i class='bx bx-edit' ></i>Edit</a>
-                    <a href="#" class="btn"><i class='bx bxs-trash'></i>Delete</a>
-                </td>
+            {{#producers}}
+                <tr style="border-bottom:1px solid #e0e0d1">
+                    <td>
+                        <img class="rounded-circle" src="{{profilepictureurl}}" style="clip-path:circle()">
+                    </td>
+                    <td>{{fullname}}</td>
+                    <td>{{bio}}</td>
+                    <td>
+                        <a href="#" class="btn"><i class='bx bx-edit' ></i>Edit</a>
+                        <a href="#" class="btn"><i class='bx bxs-trash'></i>Delete</a>
+                    </td>
 
-            </tr>
-{{/actors}}
+                </tr>
+            {{/producers}}
             </tbody>
         </table>
 
-        </div>
+    </div>
 
 </section>
 

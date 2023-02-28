@@ -20,4 +20,7 @@
 (defn actor []
   (jdbc/query mysql-db
               ["SELECT * FROM actors a"]))
-;(println (actor))
+(defn get [id]
+  (first (jdbc/query mysql-db
+                     ["SELECT * FROM actors WHERE id = ?" id])))
+;(println (get [1]))

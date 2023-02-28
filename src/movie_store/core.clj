@@ -144,6 +144,15 @@
            (route/resources "/")
            (GET "/actor" [] (controller/Actor))
            (route/resources "/")
+           (GET "/producer" [] (controller/Producer))
+           (route/resources "/")
+           (GET "/cinema" [] (controller/Cinema))
+           (route/resources "/")
+           ;(GET "/edit" [] (controller/Edit [id]))
+           ;(route/resources "/")
+
+           (GET "/edit/:id" [id]
+             (controller/Edit id))
            )
 
 
