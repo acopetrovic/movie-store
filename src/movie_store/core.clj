@@ -5,11 +5,13 @@
             [ring.middleware.params :refer [wrap-params]]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
             [ring.adapter.jetty :refer [run-jetty] :as jetty]
+            [ring.util.response :as resp]
             [ring.util.response :as response]
             [movie-store.Domain.actors :as actor]
             [movie-store.Domain.producers :as producer]
             [movie-store.Domain.cinemas :as cinema]
             [movie-store.Controller.controller :as controller]
+            [movie-store.Domain.actors :as actors-domain]
             [clojure.java.jdbc :as jdbc]
 
             ))
@@ -148,12 +150,26 @@
            (route/resources "/")
            (GET "/cinema" [] (controller/Cinema))
            (route/resources "/")
-           ;(GET "/edit" [] (controller/Edit [id]))
-           ;(route/resources "/")
+           (GET "/edit" [] (controller/Edit []))
+           (route/resources "/")
 
-           (GET "/edit/:id" [id]
+           (GET "/:id/update" [id]
              (controller/Edit id))
+
+           (POST "/:id/update" [& params]
+             (do (actors-domain/update (:id params) params)
+                 (resp/redirect "/actor")))
+
+           (GET "/:id/remove" [id]
+             (do (actors-domain/removeActor id)
+                 (resp/redirect "/actor")))
+
+           (POST "/domain/employees/insert" [& params]
+             (do (actors-domain/insertActor params)
+                 (resp/redirect "/actor")))
            )
+
+
 
 
 

@@ -7,7 +7,7 @@
                  [compojure "1.7.0"]
                  [ring "1.8.1"]
                  [uncomplicate/neanderthal "0.45.0"]
-                 [org.clojure/java.jdbc "0.7.8"]
+                 [org.clojure/java.jdbc "0.3.0-alpha5"]
                  [mysql/mysql-connector-java "5.1.6"]
                  [de.ubercode.clostache/clostache "1.4.0"]
                  [ring/ring-jetty-adapter "1.9.6"]

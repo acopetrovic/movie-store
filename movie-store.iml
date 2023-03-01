@@ -44,7 +44,7 @@
     <orderEntry type="library" name="Leiningen: org.clojure/core.specs.alpha:0.2.62" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/data.priority-map:1.0.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/java.classpath:0.3.0" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/java.jdbc:0.7.8" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/java.jdbc:0.3.0-alpha5" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/spec.alpha:0.3.218" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer.jvm:1.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer:1.0.0" level="project" />
