@@ -12,6 +12,7 @@
             [movie-store.Domain.cinemas :as cinema]
             [movie-store.Controller.controller :as controller]
             [movie-store.Domain.actors :as actors-domain]
+            [movie-store.Domain.producers :as producers-domain]
             [clojure.java.jdbc :as jdbc]
 
             ))
@@ -153,8 +154,11 @@
            (GET "/edit" [] (controller/Edit []))
            (route/resources "/")
 
-           (GET "/:id/update" [id]
-             (controller/Edit id))
+           ;Actors
+           (GET "/:id" [id]
+            (controller/Edit id))
+
+
 
            (POST "/:id/update" [& params]
              (do (actors-domain/update (:id params) params)
@@ -164,9 +168,21 @@
              (do (actors-domain/removeActor id)
                  (resp/redirect "/actor")))
 
-           (POST "/domain/employees/insert" [& params]
+           (POST "/insert" [& params]
              (do (actors-domain/insertActor params)
                  (resp/redirect "/actor")))
+           ;Producers
+           (GET "/producer/:id" [id]
+             (controller/EditP id))
+
+           (POST "/producer/:id/update" [& params]
+             (do (producers-domain/updateP (:id params) params)
+                 (resp/redirect "/producer")))
+
+           (GET "/producer/:id/remove" [id]
+             (do (producers-domain/removeProducer id)
+                 (resp/redirect "/producer")))
+           ;Cinemas
            )
 
 

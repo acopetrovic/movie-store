@@ -29,6 +29,9 @@
 (defn Producer []
   (render-template "producer" {:producers (producers-domain/producer)}))
 
+(defn EditP [id]
+  (render-template "editProducer" {:producers (producers-domain/getp id)}))
+
 (defn Cinema []
   (render-template "cinema" {:cinemas (cinemas-domain/cinema)}))
 
