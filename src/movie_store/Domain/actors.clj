@@ -24,7 +24,7 @@
   (first (jdbc/query mysql-db
                      ["SELECT * FROM actors WHERE id = ?" id])))
 
-(defn update [id params]
+(defn updateActors [id params]
    (jdbc/update! mysql-db :actors params (sql/where {:id id})))
 
 (defn removeActor [id]
@@ -32,6 +32,6 @@
                  ["DELETE FROM actors WHERE id = ?" id]))
 
 (defn insertActor
-  [params]
-  (jdbc/insert! mysql-db :actors params))
+  [actors]
+  (jdbc/insert! mysql-db :actors actors))
 ;(println (get [1]))

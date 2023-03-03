@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eTickets</title>
-    <link href="">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery-confirm.min.js"></script>
 </head>
 <body>
 <header class="shadow">
@@ -64,10 +67,10 @@
 
 <!--Subscribe-->
 <section class="newsletter" id="home">
-    <h2>Add new Actor</h2>
-    <form action="/insert">
-        <input type="submit" value="Add Actor" class="btn">
-    </form>
+    <h2>Add new Actor<br>
+        <button class="btn btn-success" id="addActors" onclick="addActors()">Add</button>
+    </h2>
+
 </section>
 <!--Footer-->
 <section class="footer">
@@ -88,7 +91,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!--Link to Custom JS-->
-<script src="../js/main.js"></script>
 
 </body>
 </html>

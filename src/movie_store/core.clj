@@ -159,15 +159,15 @@
              (controller/Edit id))
 
            (POST "/Domain/actors/:id/update" [& params]
-             (do (actors-domain/update (:id params) params)
+             (do (actors-domain/updateActors (:id params) params)
                  (resp/redirect "/actor")))
 
            (GET "/Domain/actors/:id/remove" [id]
              (do (actors-domain/removeActor id)
                  (resp/redirect "/actor")))
 
-           (POST "/insert" [& params]
-             (do (actors-domain/insertActor params)
+           (POST "/Domain/actors/insert" [& actors]
+             (do (actors-domain/insertActor actors)
                  (resp/redirect "/actor")))
            ;Producers
            ;           (GET "/producer/:id" [id]
