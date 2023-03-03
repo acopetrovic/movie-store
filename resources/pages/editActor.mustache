@@ -22,19 +22,19 @@
                 </h2>
                 <div class="clearfix"></div>
             </div>
-            <form action="/{{actors.id}}/update" method="post">
+            <form action="/Domain/actors/{{actors.id}}/update" method="post">
                 <div class="form-group text-center">
-                    <label for="model text-center">Image URL</label>
+                    <label for="image text-center">Image URL</label>
                     <input type="text" class="form-control" name="profilepictureurl" style="width:40%;margin-left:auto;margin-right:auto;"
                            value="{{actors.profilepictureurl}}"/>
                 </div>
                 <div class="form-group text-center">
-                    <label for="year">Name</label>
+                    <label for="name">Name</label>
                     <input type="text" class="form-control" name="fullname" style="width:40%;margin-left:auto;margin-right:auto;"
                            value="{{actors.fullname}}"/>
                 </div>
                 <div class="form-group text-center">
-                    <label for="horsepower">Biography</label>
+                    <label for="bio">Biography</label>
                     <input type="text" class="form-control" name="bio" style="width:40%;margin-left:auto;margin-right:auto;"
                            value="{{actors.bio}}"/>
                 </div>

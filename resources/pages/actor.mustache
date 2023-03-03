@@ -49,8 +49,8 @@
                 <td>{{fullname}}</td>
                 <td>{{bio}}</td>
                 <td>
-                    <a href="/{{id}}" class="btn"><i class='bx bx-edit' ></i>Edit</a>
-                    <a href="{{id}}/remove" class="btn"><i class='bx bxs-trash'></i>Delete</a>
+                    <a href="/Domain/actors/{{id}}/update" class="btn"><i class='bx bx-edit' ></i>Edit</a>
+                    <a href="/Domain/actors/{{id}}/remove" class="btn"><i class='bx bxs-trash'></i>Delete</a>
                 </td>
 
             </tr>
@@ -65,7 +65,7 @@
 <!--Subscribe-->
 <section class="newsletter" id="home">
     <h2>Add new Actor</h2>
-    <form action="/actor/insert">
+    <form action="/insert">
         <input type="submit" value="Add Actor" class="btn">
     </form>
 </section>

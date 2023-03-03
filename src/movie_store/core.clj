@@ -156,15 +156,13 @@
 
            ;Actors
            (GET "/:id" [id]
-            (controller/Edit id))
+             (controller/Edit id))
 
-
-
-           (POST "/:id/update" [& params]
+           (POST "/Domain/actors/:id/update" [& params]
              (do (actors-domain/update (:id params) params)
                  (resp/redirect "/actor")))
 
-           (GET "/:id/remove" [id]
+           (GET "/Domain/actors/:id/remove" [id]
              (do (actors-domain/removeActor id)
                  (resp/redirect "/actor")))
 
@@ -172,25 +170,28 @@
              (do (actors-domain/insertActor params)
                  (resp/redirect "/actor")))
            ;Producers
-           (GET "/producer/:id" [id]
-             (controller/EditP id))
+           ;           (GET "/producer/:id" [id]
+           ; (controller/EditP id)
+           ;           )
 
-           (POST "/producer/:id/update" [& params]
-             (do (producers-domain/updateP (:id params) params)
-                 (resp/redirect "/producer")))
+           ;           (POST "/producer/:id/update" [& params]
+           ;           (do (producers-domain/updateP (:id params) params)
+           ;   (resp/redirect "/producer")
+           ;           ))
 
-           (GET "/producer/:id/remove" [id]
-             (do (producers-domain/removeProducer id)
-                 (resp/redirect "/producer")))
-           ;Cinemas
-           )
-
-
-
-
+           ;           (GET "/producer/:id/remove" [id]
+             ;             (do (producers-domain/removeProducer id)
+             ;(resp/redirect "/producer")
+             ;             ))
+             ;Cinemas
+             )
 
 
-(jetty/run-jetty (fn [req] (handler req)) {:port 4003 :join? false})
+
+
+
+
+           (jetty/run-jetty (fn [req] (handler req)) {:port 4003 :join? false})
 
 
 
