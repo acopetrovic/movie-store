@@ -19,14 +19,17 @@
   (jdbc/query mysql-db
               ["SELECT * FROM producers p"]))
 
-(defn getp [id]
+(defn getProducer [id]
   (first (jdbc/query mysql-db
                      ["SELECT * FROM producers WHERE id = ?" id])))
 
-(defn updateP [id params]
+(defn updateProducer [id params]
   (jdbc/update! mysql-db :producers params (sql/where {:id id})))
 
 (defn removeProducer [id]
   (jdbc/execute! mysql-db
                  ["DELETE FROM producers WHERE id = ?" id]))
+(defn insertProducer
+  [params]
+  (jdbc/insert! mysql-db :producers params))
 ;(println (actor))

@@ -11,7 +11,10 @@
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery-confirm.min.js"></script>
 </head>
 <body>
 <header class="shadow">
@@ -49,8 +52,8 @@
                     <td>{{fullname}}</td>
                     <td>{{bio}}</td>
                     <td>
-                        <a href="producer/{{id}}" class="btn"><i class='bx bx-edit' ></i>Edit</a>
-                        <a href="producer/{{id}}/remove" class="btn"><i class='bx bxs-trash'></i>Delete</a>
+                        <a href="/Domain/producers/{{id}}/update" class="btn"><i class='bx bx-edit' ></i>Edit</a>
+                        <a href="/Domain/producers/{{id}}/remove" class="btn"><i class='bx bxs-trash'></i>Delete</a>
                     </td>
 
                 </tr>
@@ -64,11 +67,10 @@
 
 <!--Subscribe-->
 <section class="newsletter" id="home">
-    <h2>Subscribe To Get <br> Newsletter</h2>
-    <form action="">
-        <input type="email" class="email" placeholder=" Enter Email..." required>
-        <input type="submit" value="Subscribe" class="btn">
-    </form>
+    <h2>Add new Producer<br>
+        <button class="btn btn-success" id="addProducers" onclick="addActors()">Add Producer</button>
+    </h2>
+
 </section>
 <!--Footer-->
 <section class="footer">

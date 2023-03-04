@@ -29,11 +29,14 @@
 (defn Producer []
   (render-template "producer" {:producers (producers-domain/producer)}))
 
-(defn EditP [id]
-  (render-template "editProducer" {:producers (producers-domain/getp id)}))
+(defn EditProducer [id]
+  (render-template "editProducer" {:producers (producers-domain/getProducer id)}))
 
 (defn Cinema []
   (render-template "cinema" {:cinemas (cinemas-domain/cinema)}))
+
+(defn EditCinema [id]
+  (render-template "editCinema" {:cinemas (cinemas-domain/getCinema id)}))
 
 (defn home []
   (render-template "homepage" {:movies (movies-domain/home)}) )

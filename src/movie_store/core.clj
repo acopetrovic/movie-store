@@ -13,6 +13,7 @@
             [movie-store.Controller.controller :as controller]
             [movie-store.Domain.actors :as actors-domain]
             [movie-store.Domain.producers :as producers-domain]
+            [movie-store.Domain.cinemas :as cinemas-domain]
             [clojure.java.jdbc :as jdbc]
 
             ))
@@ -155,7 +156,7 @@
            (route/resources "/")
 
            ;Actors
-           (GET "/:id" [id]
+           (GET "/Domain/actors/:id/update" [id]
              (controller/Edit id))
 
            (POST "/Domain/actors/:id/update" [& params]
@@ -166,24 +167,39 @@
              (do (actors-domain/removeActor id)
                  (resp/redirect "/actor")))
 
-           (POST "/Domain/actors/insert" [& actors]
-             (do (actors-domain/insertActor actors)
+           (POST "/Domain/actors/insert" [& params]
+             (do (actors-domain/insertActor params)
                  (resp/redirect "/actor")))
            ;Producers
-           ;           (GET "/producer/:id" [id]
-           ; (controller/EditP id)
-           ;           )
+           (GET "/Domain/producers/:id/update" [id]
+            (controller/EditProducer id))
 
-           ;           (POST "/producer/:id/update" [& params]
-           ;           (do (producers-domain/updateP (:id params) params)
-           ;   (resp/redirect "/producer")
-           ;           ))
+           (POST "/Domain/producers/:id/update" [& params]
+             (do (producers-domain/updateProducer (:id params) params)
+              (resp/redirect "/producer")))
 
-           ;           (GET "/producer/:id/remove" [id]
-             ;             (do (producers-domain/removeProducer id)
-             ;(resp/redirect "/producer")
-             ;             ))
+           (GET "/Domain/producers/:id/remove" [id]
+             (do (producers-domain/removeProducer id)
+              (resp/redirect "/producer")))
+
+           (POST "/Domain/producers/insert" [& params]
+             (do (producers-domain/insertProducer params)
+                 (resp/redirect "/producer")))
              ;Cinemas
+           (GET "/Domain/cinemas/:id/update" [id]
+             (controller/EditCinema id))
+
+           (POST "/Domain/cinemas/:id/update" [& params]
+             (do (cinemas-domain/updateCinema (:id params) params)
+                 (resp/redirect "/cinema")))
+
+           (GET "/Domain/cinemas/:id/remove" [id]
+             (do (cinemas-domain/removeCinema id)
+                 (resp/redirect "/cinema")))
+
+           (POST "/Domain/cinemas/insert" [& params]
+             (do (cinemas-domain/insertCinema params)
+                 (resp/redirect "/cinema")))
              )
 
 
