@@ -16,37 +16,32 @@
     <script src="/js/app.js"></script>
     <script src="/js/jquery-confirm.min.js"></script>
 </head>
-<body>
-<div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-            <div class="x_title text-center">
-                <h2>Update Cinema
-                </h2>
-                <div class="clearfix"></div>
-            </div>
+<body style="background:black;justify-content:center;">
+
+            <div class="title" style="text-align:center; color:white;padding:10px">
+                <h1>Update Cinema
+                </h1>
+
             <form action="/Domain/cinemas/{{cinemas.id}}/update" method="post">
                 <div class="form-group text-center">
-                    <label for="model text-center">Image URL</label>
-                    <input type="text" class="form-control" name="profilepictureurl" style="width:40%;margin-left:auto;margin-right:auto;"
+                    <label for="model text-center" style="font-size:24px"><b>Image URL</b><br></label>
+                    <input type="text" class="form-control" name="profilepictureurl" style="width: 40%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;"
                            value="{{cinemas.logo}}"/>
                 </div>
                 <div class="form-group text-center">
-                    <label for="year">Name</label>
-                    <input type="text" class="form-control" name="fullname" style="width:40%;margin-left:auto;margin-right:auto;"
+                    <label for="year" style="font-size:24px"><b>Name</b><br></label>
+                    <input type="text" class="form-control" name="fullname" style="width: 40%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;"
                            value="{{cinemas.name}}"/>
                 </div>
                 <div class="form-group text-center">
-                    <label for="horsepower">Biography</label>
-                    <input type="text" class="form-control" name="bio" style="width:40%;margin-left:auto;margin-right:auto;"
+                    <label for="horsepower" style="font-size:24px"><b>Biography</b><br></label>
+                    <input type="text" class="form-control" name="bio" style="width: 40%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;"
                            value="{{cinemas.description}}"/>
                 </div>
 
-                <button type="submit" class="btn btn-danger" style="float:right;margin-right:30%;">Save update</button>
+                <button type="submit" class="btn btn-danger" style="padding: 0.6rem 0.7rem;background: red;color: white;font-weight: 400;border-radius: 0.5rem;float:right;margin-right:30%;">Save update</button>
             </form>
         </div>
-    </div>
 
-</div>
 </body>
 </html>
