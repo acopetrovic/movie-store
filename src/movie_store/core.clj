@@ -1,20 +1,16 @@
 (ns movie-store.core
-  (:require [compojure.core :refer :all]
+  (:use compojure.core)
+  (:require [compojure.core :refer [defroutes GET POST]]
             [compojure.route :as route]
             [hiccup.core :refer [html]]
-            [ring.middleware.params :refer [wrap-params]]
-            [ring.middleware.keyword-params :refer [wrap-keyword-params]]
             [ring.adapter.jetty :refer [run-jetty] :as jetty]
             [ring.util.response :as resp]
-            [ring.util.response :as response]
-            [movie-store.Domain.actors :as actor]
-            [movie-store.Domain.producers :as producer]
-            [movie-store.Domain.cinemas :as cinema]
+            [compojure.handler :as handler]
+            [ring.middleware.basic-authentication :refer :all]
             [movie-store.Controller.controller :as controller]
             [movie-store.Domain.actors :as actors-domain]
             [movie-store.Domain.producers :as producers-domain]
             [movie-store.Domain.cinemas :as cinemas-domain]
-            [clojure.java.jdbc :as jdbc]
 
             ))
 
@@ -135,7 +131,7 @@
                       ]]]])})
 
 
-(defroutes handler
+(defroutes public-routes
            ;(GET "/movies" [] movie-handler)
            ;(GET "/actors" [] actor/actor-handler)
            ;(GET "/producers" [] producer/producer-handler)
@@ -172,20 +168,20 @@
                  (resp/redirect "/actor")))
            ;Producers
            (GET "/Domain/producers/:id/update" [id]
-            (controller/EditProducer id))
+             (controller/EditProducer id))
 
            (POST "/Domain/producers/:id/update" [& params]
              (do (producers-domain/updateProducer (:id params) params)
-              (resp/redirect "/producer")))
+                 (resp/redirect "/producer")))
 
            (GET "/Domain/producers/:id/remove" [id]
              (do (producers-domain/removeProducer id)
-              (resp/redirect "/producer")))
+                 (resp/redirect "/producer")))
 
            (POST "/Domain/producers/insert" [& params]
              (do (producers-domain/insertProducer params)
                  (resp/redirect "/producer")))
-             ;Cinemas
+           ;Cinemas
            (GET "/Domain/cinemas/:id/update" [id]
              (controller/EditCinema id))
 
@@ -200,14 +196,17 @@
            (POST "/Domain/cinemas/insert" [& params]
              (do (cinemas-domain/insertCinema params)
                  (resp/redirect "/cinema")))
-             )
+           )
 
 
+(defroutes app-routes
+           public-routes
+           (route/not-found "404. Page not found"))
 
+(def app
+(handler/site app-routes))
 
-
-
-           (jetty/run-jetty (fn [req] (handler req)) {:port 4003 :join? false})
+(jetty/run-jetty (fn [req] (public-routes req)) {:port 4003 :join? false})
 
 
 

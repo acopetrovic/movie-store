@@ -12,14 +12,11 @@
                  [de.ubercode.clostache/clostache "1.4.0"]
                  [ring/ring-jetty-adapter "1.9.6"]
                  [hiccup "1.0.5"]
-                 [org.webjars/bootstrap "4.6.1"]]
-  :dev
-    {:dependencies [[midje "1.10.9"]]
-     :plugins      [[lein-midje "3.2.1"]]}
-
+                 [org.webjars/bootstrap "4.6.1"]
+                 [ring-basic-authentication "1.0.5"]]
+  :plugins [[lein-ring "0.9.7"]]
+  :ring {:handler movie-store.core/app}
   :main ^:skip-aot movie-store.core
   :target-path "target/%s"
-  :profiles
-    {:uberjar {:aot      :all
-  :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
+  :profiles {:uberjar {:aot :all}}
   )
