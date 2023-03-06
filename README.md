@@ -7,11 +7,13 @@ Application should allow a user to create a new actor, update, delete, and read 
 
 ## User demo introduction
 
-in this part i'm show you quick overview of this website.<br>
+In this part i'm show you quick overview of this website.<br>
 This is the look of homepage card
-[homepage1](homepage1.png)
-[homepage2](homepage2.png)
-[homepage3](homepage3.png)
+[homepage1](homepage1.png),
+[homepage2](homepage2.png),
+[homepage3](homepage3.png).<br>
+First here we have a scrolling panel, after it is a section opening this year and those are the movies that will be available this year, and finally we have a section subscribe to get newsletter where you can enter your email address, below it you can click and visit my GitHub account.
+
 ## Usage
 
 To start the application, open the terminal and run: `lein run`.<br>
