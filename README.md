@@ -9,9 +9,9 @@ Application should allow a user to create a new actor, update, delete, and read 
 
 in this part i'm show you quick overview of this website.<br>
 This is the look of homepage card
-[homepage1]()
-[homepage2]()
-[homepage3]()
+[homepage1](homepage1.png)
+[homepage2](homepage2.png)
+[homepage3](homepage3.png)
 ## Usage
 
 To start the application, open the terminal and run: `lein run`.<br>
