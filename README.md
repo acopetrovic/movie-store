@@ -3,16 +3,21 @@
 The goal of this project is to make web application with CRUD operations.
 
 The application uses Mustache logic-less templates for html pages, Clostache is Mustache for Clojure. Ring is used as a basic for this web application. It uses Compojure as routing library for Ring.
-Application should allow a user to create a new actor, update, delete, and read all the actors from database. It should also allow for creation of a new producer and cinema, update, delete and read all producers and cinemas from database. It Also this web application should read all movies from database. 
+Application should allow a user to create a new actor, update, delete, and read all the actors from database. It should also allow for creation of a new producer and cinema, update, delete and read all producers and cinemas from database. It also this web application should read all movies from database. 
 
 ## User demo introduction
 
-In this part i'm show you quick overview of this website.<br>
+In this part i'm show you quick overview of this website.
+<br>
+
 This is the look of homepage card
 [homepage1](homepage1.png),
 [homepage2](homepage2.png),
-[homepage3](homepage3.png).<br>
-First here we have a scrolling panel, after it is a section opening this year and those are the movies that will be available this year, and finally we have a section subscribe to get newsletter where you can enter your email address, below it you can click and visit my GitHub account.
+[homepage3](homepage3.png), first here we have a scrolling panel, after it is a section opening this year and those are the movies that will be available this year, and finally we have a section subscribe to get newsletter where you can enter your email address, below it you can click and visit my GitHub account.<br>
+
+The look of movies card is here
+[movie](movies.png), in section available movies we have a scrolling panel that can be list on both side and here we read movies from our database, also exist option add to cart, when we pass the thought over a certain film, the information about it is printed as you can see in the picture [movie1](movies1.png).
+Next two section is the same like on homepage, subscribe and GitHub account.
 
 ## Usage
 
