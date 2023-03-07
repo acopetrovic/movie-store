@@ -17,8 +17,10 @@ This is the look of homepage card
 
 The look of movies card is here
 [movie](movies.png), in section available movies we have a scrolling panel that can be list on both side and here we read movies from our database, also exist option add to cart, when we pass the thought over a certain film, the information about it is printed as you can see in the picture [movie1](movies1.png).
-Next two section is the same like on homepage, subscribe and GitHub account.
+Next two section is the same like homepage, subscribe and GitHub account.
 
+Next three card are very similar. Right here is the look of that three card [actors](actor.png), [producers](producer.png), [cinemas](cinema.png). On card actors we have all actors from our database, in section "actions" we have two button `edit` and `delete` for update the existing one and deletiting it, below that has button add actor where we could insert new actor.
+When we click the `edit` button it redirects us to the [update](actoru.png) page and when you click the `Add` button, we get a [form](form.png) for adding a new actor. 
 ## Usage
 
 To start the application, open the terminal and run: `lein run`.<br>
