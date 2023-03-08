@@ -1,5 +1,5 @@
 # movie-store web app
-
+Welcome to the documentation for our movie store built using Clojure! In this documentation, we will cover the various features of our movie store and how to use them.
 The goal of this project is to make web application with CRUD operations.
 
 The application uses Mustache logic-less templates for html pages, Clostache is Mustache for Clojure. Ring is used as a basic for this web application. It uses Compojure as routing library for Ring.
@@ -19,8 +19,10 @@ The look of movies card is here
 [movie](movies.png), in section available movies we have a scrolling panel that can be list on both side and here we read movies from our database, also exist option add to cart, when we pass the thought over a certain film, the information about it is printed as you can see in the picture [movie1](movies1.png).
 Next two section is the same like homepage, subscribe and GitHub account.
 
-Next three card are very similar. Right here is the look of that three card [actors](actor.png), [producers](producer.png), [cinemas](cinema.png). On card actors we have all actors from our database, in section "actions" we have two button `edit` and `delete` for update the existing one and deletiting it, below that has button add actor where we could insert new actor.
-When we click the `edit` button it redirects us to the [update](actoru.png) page and when you click the `Add` button, we get a [form](form.png) for adding a new actor. 
+Next three card are very similar. Right here is the look of that three card [actors](actor.png), [producers](producer.png), [cinemas](cinema.png). On card actors we have all actors from our database, in section "actions" we have two button `Edit` and `Delete` for update the existing one and deletiting it, below that has button add actor where we could insert new actor.
+When we click the `edit` button it redirects us to the [update](actoru.png) page and when you click the `Add` button, we get a [form](form.png) for adding a new actor.
+On card producers we have all producers from our database, the "actions" section is the same as on the actor page. Button `Edit` redirects us to [update](produceru.png) producer page and button `Add Producer` we get a [form](form.png) for adding new producer.
+On card cinemas we have all cinemas from our database, the "actions" section is the same as on the actor page. Button `Edit` redirects us to [update](cinemau.png) cinema page and button `Add Cinema` we get a [form](form.png) for adding new cinema.
 ## Usage
 
 To start the application, open the terminal and run: `lein run`.<br>
