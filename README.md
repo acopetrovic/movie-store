@@ -42,7 +42,12 @@ You will need <a href="https://leiningen.org">Leiningen</a> installed.
 
 ### Any Other Sections
 ### That You Think
-### Might be Useful
+## Sources
+[1] Daniel Higginbotham, 2016, Clojure for the Brave and True
+
+[2] https://github.com/bbatsov/clojure-style-guide
+
+[3] https://clojars.org/
 
 ## License
 
