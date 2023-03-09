@@ -1,4 +1,4 @@
-# movie-store web app
+# Movie store web application in Clojure
 Welcome to the documentation for our movie store built using Clojure! In this documentation, we will cover the various features of our movie store and how to use them.
 The goal of this project is to make web application with CRUD operations.
 
@@ -28,6 +28,18 @@ On card cinemas we have all cinemas from our database, the "actions" section is 
 To start the application, open the terminal and run: `lein run`.<br>
 Also you need to import `database.sql` file. 
 
+## Why we need this tool?
+A movie store built in Clojure can be a useful tool for several reasons:
+
+Improved User Experience: The movie store provides a simple and intuitive interface for users. Users can quickly find the movies they are interested in. 
+
+Scalability: Clojure is known for its ability to handle high levels of concurrency and scale easily. This makes it an ideal choice for building a movie store that can handle a large number of customers.
+
+Data Management: With the use of a powerful database, the movie store can easily manage large amounts of movie data.
+
+Overall, a movie store built in Clojure can provide a robust and scalable solution for managing movies online. Whether you are a customer or a developer looking to integrate with the application, the movie store can be a useful tool.
+
+
 ## Options
 
 FIXME: listing of options this app accepts.
@@ -36,12 +48,7 @@ FIXME: listing of options this app accepts.
 
 You will need <a href="https://leiningen.org">Leiningen</a> installed.
 
-### Bugs
 
-...
-
-### Any Other Sections
-### That You Think
 ## Sources
 [1] Daniel Higginbotham, 2016, Clojure for the Brave and True
 
@@ -49,6 +56,7 @@ You will need <a href="https://leiningen.org">Leiningen</a> installed.
 
 [3] https://clojars.org/
 
+[4] https://clojure.org/api/cheatsheet
 ## License
 
 Copyright © 2023 FIXME
