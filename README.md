@@ -29,24 +29,25 @@ To start the application, open the terminal and run: `lein run`.<br>
 Also you need to import `database.sql` file. 
 
 ## Why we need this tool?
-A movie store built in Clojure can be a useful tool for several reasons:
+Firstly, access to a wide range of movies. A movie store can provide you with access to a large library of movies, including both new releases and classic films. This can be particularly useful if you enjoy watching movies and want to have a lot of options to choose from.
 
-Improved User Experience: The movie store provides a simple and intuitive interface for users. Users can quickly find the movies they are interested in. 
+Some people prefer to own physical copies of movies on DVD or Blu-ray.
+Visit web to a movie store can be a fun and nostalgic experience, especially for those who grew up in the era of VHS tapes and video rental stores.
 
-Scalability: Clojure is known for its ability to handle high levels of concurrency and scale easily. This makes it an ideal choice for building a movie store that can handle a large number of customers.
-
-Data Management: With the use of a powerful database, the movie store can easily manage large amounts of movie data.
-
-Overall, a movie store built in Clojure can provide a robust and scalable solution for managing movies online. Whether you are a customer or a developer looking to integrate with the application, the movie store can be a useful tool.
+Overall, a movie store can be a great resource for anyone who loves movies and wants to have access to a wide range of titles. A good movie store can provide you with convenience, quality, and a great selection of films to choose from.
 
 
-## Options
 
-FIXME: listing of options this app accepts.
 
 ## Prerequisites
 
 You will need <a href="https://leiningen.org">Leiningen</a> installed.
+## Conclusion
+building a movie store in Clojure can offer several advantages, including high concurrency, functional programming, scalability, interoperability, a rich ecosystem of libraries and tools, and a simple syntax. 
+Clojure's focus on immutability, pure functions, and concurrency can help simplify the design and implementation of the movie store, while its ability to scale easily and interoperate with other technologies can help the application grow with your business. 
+Whether you are building a small movie rental service or a large-scale streaming platform, Clojure can provide a solid foundation for your application, enabling you to offer a user-friendly interface for customers and a powerful set of tools for developers.
+
+This project was developed for the course "Tools and Methods of Artificial Intelligence" at Master studies at Faculty of Organizational Sciences University of Belgrade.
 
 
 ## Sources
