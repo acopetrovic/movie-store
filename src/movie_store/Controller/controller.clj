@@ -38,5 +38,5 @@
 (defn EditCinema [id]
   (render-template "editCinema" {:cinemas (cinemas-domain/getCinema id)}))
 
-(defn home []
-  (render-template "homepage" {:movies (movies-domain/home)}) )
+;(defn home []
+;(render-template "homepage" {:movies (movies-domain/home)}))
