@@ -20,13 +20,9 @@ The look of movies card is here
 Next two section is the same like homepage, subscribe and GitHub account.
 
 Next three card are very similar. Right here is the look of that three card [actors](actor.png), [producers](producer.png), [cinemas](cinema.png). On card actors we have all actors from our database, in section "actions" we have two button `Edit` and `Delete` for update the existing one and deletiting it, below that has button add actor where we could insert new actor.
-When we click the `edit` button it redirects us to the [update](actoru.png) page and when you click the `Add` button, we get a [form](form.png) for adding a new actor.
+When we click the `Edit` button it redirects us to the [update](actoru.png) page and when you click the `Add` button, we get a [form](form.png) for adding a new actor.
 On card producers we have all producers from our database, the "actions" section is the same as on the actor page. Button `Edit` redirects us to [update](produceru.png) producer page and button `Add Producer` we get a [form](form.png) for adding new producer.
 On card cinemas we have all cinemas from our database, the "actions" section is the same as on the actor page. Button `Edit` redirects us to [update](cinemau.png) cinema page and button `Add Cinema` we get a [form](form.png) for adding new cinema.
-## Usage
-
-To start the application, open the terminal and run: `lein run`.<br>
-Also you need to import `database.sql` file. 
 
 ## Why we need this tool?
 Firstly, access to a wide range of movies. A movie store can provide you with access to a large library of movies, including both new releases and classic films. This can be particularly useful if you enjoy watching movies and want to have a lot of options to choose from.
@@ -42,12 +38,24 @@ Overall, a movie store can be a great resource for anyone who loves movies and w
 ## Prerequisites
 
 You will need <a href="https://leiningen.org">Leiningen</a> installed.
+
+## Usage
+
+To start the application, open the terminal and run: `lein run`.<br>
+Also you need to import `database.sql` file.
+
+## Description 
+I hope you enjoy using our movie store web app and that it helps you find your next favorite movie!
+
+This project was developed for the course "Tools and Methods of Artificial Intelligence" at Master studies at Faculty of Organizational Sciences University of Belgrade.
+
+That would be it. I hope you'll like it. However this is my first Clojure project.
+
 ## Conclusion
 building a movie store in Clojure can offer several advantages, including high concurrency, functional programming, scalability, interoperability, a rich ecosystem of libraries and tools, and a simple syntax. 
 Clojure's focus on immutability, pure functions, and concurrency can help simplify the design and implementation of the movie store, while its ability to scale easily and interoperate with other technologies can help the application grow with your business. 
 Whether you are building a small movie rental service or a large-scale streaming platform, Clojure can provide a solid foundation for your application, enabling you to offer a user-friendly interface for customers and a powerful set of tools for developers.
 
-This project was developed for the course "Tools and Methods of Artificial Intelligence" at Master studies at Faculty of Organizational Sciences University of Belgrade.
 
 
 ## Sources
