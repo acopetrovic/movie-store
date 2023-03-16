@@ -1,7 +1,7 @@
 (ns movie-store.core-test
   (:require [clojure.test :refer :all]
             [movie-store.core :refer :all]
-            [movie-store.Domain.actors :as actors]
+            [movie-store.Domain.actors :refer :all]
             [movie-store.Domain.producers :refer :all]
             [movie-store.Domain.cinemas :refer :all]
             [movie-store.Domain.movies :refer :all]
