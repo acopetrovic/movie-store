@@ -16,5 +16,9 @@
   :ring {:handler movie-store.core/app}
   :main ^:skip-aot movie-store.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}}
+  :profiles {:uberjar {:aot :all}
+             :dev
+             {:dependencies [[midje "1.10.9"]
+                             [criterium "0.4.6"]]
+              :plugins      [[lein-midje "3.2.1"]]}}
   )
