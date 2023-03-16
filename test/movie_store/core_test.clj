@@ -14,23 +14,23 @@
 (facts "Najjednostavniji test" (+ 1 2) => 3)
 
 (midje.sweet/facts "test actors"
-                   (actors/get 1) => {:bio "This is the Bio of the five actor"
+                   (movie-store.Domain.actors/get 1) => {:bio "This is the Bio of the five actor"
                                                          :fullname "Actor 5"
                                                          :id 1
                                                          :profilepictureurl "http://dotnethow.net/images/actors/actor-5.jpeg"}
-                   (actors/get 2) => {:bio "This is the Bio of the fourth actor"
+                   (movie-store.Domain.actors/get 2) => {:bio "This is the Bio of the fourth actor"
                                                          :fullname "Actor 4"
                                                          :id 2
                                                          :profilepictureurl "http://dotnethow.net/images/actors/actor-4.jpeg"}
-                   (actors/get 3) => {:bio "This is the Bio of the third actor"
+                   (movie-store.Domain.actors/get 3) => {:bio "This is the Bio of the third actor"
                                                          :fullname "Actor 3"
                                                          :id 3
                                                          :profilepictureurl "http://dotnethow.net/images/actors/actor-3.jpeg"}
-                   (actors/get 4) => {:bio "This is the Bio of the second actor"
+                   (movie-store.Domain.actors/get 4) => {:bio "This is the Bio of the second actor"
                                                          :fullname "Actor 2"
                                                          :id 4
                                                          :profilepictureurl "http://dotnethow.net/images/actors/actor-2.jpeg"}
-                   (actors/get 5) => {:bio "This is the Bio of the first actor"
+                   (movie-store.Domain.actors/get 5) => {:bio "This is the Bio of the first actor"
                                                          :fullname "Actor 1"
                                                          :id 4
                                                          :profilepictureurl "http://dotnethow.net/images/actors/actor-1.jpeg"})
