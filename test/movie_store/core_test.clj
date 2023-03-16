@@ -4,7 +4,6 @@
             [movie-store.Domain.actors :refer :all]
             [movie-store.Domain.producers :refer :all]
             [movie-store.Domain.cinemas :refer :all]
-            [movie-store.Domain.movies :refer :all]
             [midje.sweet :refer :all]))
 
 (deftest a-test
