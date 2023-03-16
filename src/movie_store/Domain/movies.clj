@@ -1,7 +1,6 @@
 (ns movie-store.Domain.movies
   (:refer-clojure :exclude [get])
   (:require [clojure.java.jdbc :as jdbc]
-    ;[clojure.java.jdbc.sql :as sql]
             ))
 
 (def mysql-db {
@@ -17,8 +16,3 @@
 (defn allMovies []
   (jdbc/query mysql-db
               ["SELECT * FROM movies m"]))
-;(defn home []
-;(jdbc/query mysql-db
-;["SELECT * FROM movies m"]) )
-
-;(println (allMovies))

@@ -34,4 +34,3 @@
 (defn insertActor
   [params]
   (jdbc/insert! mysql-db :actors params))
-;(println (get [1]))

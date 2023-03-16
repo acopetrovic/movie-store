@@ -32,4 +32,3 @@
 (defn insertCinema
   [params]
   (jdbc/insert! mysql-db :cinemas params))
-;(println (actor))

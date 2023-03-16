@@ -32,4 +32,3 @@
 (defn insertProducer
   [params]
   (jdbc/insert! mysql-db :producers params))
-;(println (actor))
