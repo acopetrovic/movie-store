@@ -12,7 +12,8 @@
                  [de.ubercode.clostache/clostache "1.4.0"]
                  [ring/ring-jetty-adapter "1.9.6"]
                  [ring-basic-authentication "1.0.5"]]
-  :plugins [[lein-ring "0.9.7"]]
+  :plugins [[lein-ring "0.9.7"]
+            [com.github.clj-kondo/lein-clj-kondo "0.2.4"]]
   :ring {:handler movie-store.core/app}
   :main ^:skip-aot movie-store.core
   :target-path "target/%s"

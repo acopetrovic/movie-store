@@ -1,11 +1,10 @@
 (ns movie-store.core
-  (:use compojure.core)
+
   (:require [compojure.core :refer [defroutes GET POST]]
             [compojure.route :as route]
             [ring.adapter.jetty :refer [run-jetty] :as jetty]
             [ring.util.response :as resp]
             [compojure.handler :as handler]
-            [ring.middleware.basic-authentication :refer :all]
             [movie-store.Controller.controller :as controller]
             [movie-store.Domain.actors :as actors-domain]
             [movie-store.Domain.producers :as producers-domain]
