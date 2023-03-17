@@ -10,7 +10,7 @@
   (testing "FIXME, I fail."
     (is (= 0 1))))
 
-(facts "Najjednostavniji test" (+ 1 2) => 3)
+(midje.sweet/facts "Najjednostavniji test" (+ 1 2) => 3)
 
 (midje.sweet/facts "test actors"
                    (movie-store.Domain.actors/get 1) => {:bio "This is the Bio of the five actor"
