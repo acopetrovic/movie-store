@@ -15,8 +15,6 @@
                :zeroDateTimeBehaviour "convertToNull"
                })
 
-(def now (str (java.sql.Timestamp. (System/currentTimeMillis))))
-
 (defn actor []
   (jdbc/query mysql-db
               ["SELECT * FROM actors a"]))

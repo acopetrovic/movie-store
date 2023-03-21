@@ -13,8 +13,6 @@
                :zeroDateTimeBehaviour "convertToNull"
                })
 
-(def now (str (java.sql.Timestamp. (System/currentTimeMillis))))
-
 (defn cinema []
   (jdbc/query mysql-db
               ["SELECT * FROM cinemas c"]))

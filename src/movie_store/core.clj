@@ -72,7 +72,6 @@
                  (resp/redirect "/cinema")))
            )
 
-
 (defroutes app-routes
            public-routes
            (route/not-found "404. Page not found"))
