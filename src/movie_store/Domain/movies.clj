@@ -17,7 +17,7 @@
 
 (defn allMovie []
   (jdbc/query mysql-db
-              ["SELECT id, price FROM movies m"]
+              ["SELECT price FROM movies m"]
               ))
 
 (defn statistic []

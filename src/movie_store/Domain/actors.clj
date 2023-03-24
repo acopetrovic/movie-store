@@ -32,3 +32,12 @@
 (defn insertActor
   [params]
   (jdbc/insert! mysql-db :actors params))
+
+(defn statisticActor []
+  (jdbc/query mysql-db
+              (let [actor []
+                    num-actor (count actor)
+                    ]
+                {
+                 :num-movies num-actor
+                 })))
