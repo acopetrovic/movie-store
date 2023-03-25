@@ -30,3 +30,10 @@
 (defn insertProducer
   [params]
   (jdbc/insert! mysql-db :producers params))
+
+(defn statisticProducer []
+  (let [result (jdbc/query mysql-db ["SELECT COUNT(*) FROM producers"])]
+    (-> result
+        first
+        vals
+        first)))

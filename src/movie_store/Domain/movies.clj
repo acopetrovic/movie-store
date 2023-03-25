@@ -15,17 +15,9 @@
   (jdbc/query mysql-db
               ["SELECT * FROM movies m"]))
 
-(defn allMovie []
-  (jdbc/query mysql-db
-              ["SELECT price FROM movies m"]
-              ))
-
-(defn statistic []
-  (jdbc/query mysql-db
-              (let [allMovie []
-                    num-movies (count allMovie)
-                    total-price (reduce + (map :price allMovie))
-                    ]
-                    {:average-price (/ total-price num-movies)
-                     :num-movies num-movies
-                    })))
+(defn statisticMovie []
+  (let [result (jdbc/query mysql-db ["SELECT COUNT(*) FROM movies"])]
+    (-> result
+        first
+        vals
+        first)))

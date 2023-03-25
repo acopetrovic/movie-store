@@ -30,3 +30,10 @@
 (defn insertCinema
   [params]
   (jdbc/insert! mysql-db :cinemas params))
+
+(defn statisticCinema []
+  (let [result (jdbc/query mysql-db ["SELECT COUNT(*) FROM cinemas"])]
+    (-> result
+        first
+        vals
+        first)))

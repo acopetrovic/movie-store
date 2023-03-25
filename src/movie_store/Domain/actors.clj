@@ -23,7 +23,7 @@
                      ["SELECT * FROM actors WHERE id = ?" id])))
 
 (defn updateActors [id actors]
-   (jdbc/update! mysql-db :actors actors (sql/where {:id id})))
+  (jdbc/update! mysql-db :actors actors (sql/where {:id id})))
 
 (defn removeActor [id]
   (jdbc/execute! mysql-db
@@ -34,10 +34,8 @@
   (jdbc/insert! mysql-db :actors params))
 
 (defn statisticActor []
-  (jdbc/query mysql-db
-              (let [actor []
-                    num-actor (count actor)
-                    ]
-                {
-                 :num-movies num-actor
-                 })))
+  (let [result (jdbc/query mysql-db ["SELECT COUNT(*) FROM actors"])]
+    (-> result
+        first
+        vals
+        first)))
