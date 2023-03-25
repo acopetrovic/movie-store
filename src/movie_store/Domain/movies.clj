@@ -21,3 +21,10 @@
         first
         vals
         first)))
+
+(defn avg-price []
+  (let [result (jdbc/query mysql-db ["SELECT AVG(price) FROM movies"])]
+    (-> result
+        first
+        vals
+        first)))
