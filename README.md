@@ -58,7 +58,7 @@ That would be it. I hope you'll like it. However this is my first Clojure projec
 [Clj-kondo](https://github.com/clj-kondo/clj-kondo) is a static analyzer and linter for Clojure code, without the need of a running REPL. It informs you about potential errors while you are typing.
 To start the clj-kondo, open the terminal and run: `lein clj-kondo`.
 ## Conclusion
-building a movie store in Clojure can offer several advantages, including high concurrency, functional programming, scalability, interoperability, a rich ecosystem of libraries and tools, and a simple syntax. 
+Building a movie store in Clojure can offer several advantages, including high concurrency, functional programming, scalability, interoperability, a rich ecosystem of libraries and tools, and a simple syntax. 
 Clojure's focus on immutability, pure functions, and concurrency can help simplify the design and implementation of the movie store, while its ability to scale easily and interoperate with other technologies can help the application grow with your business. 
 Whether you are building a small movie rental service or a large-scale streaming platform, Clojure can provide a solid foundation for your application, enabling you to offer a user-friendly interface for customers and a powerful set of tools for developers.
 
@@ -79,7 +79,7 @@ Whether you are building a small movie rental service or a large-scale streaming
 
 [7] https://github.com/clj-kondo/lein-clj-kondo
 
-[8] https://github.com/blueberry/clojure-web-crud I took this project as a model for my project, the very organization of the project. In this project, I saw how "Mustache" and database connection work, so I used it in my project, too. I implemented other functionalities based on what we did at the university.
+[8] https://github.com/blueberry/clojure-web-crud I took this project as a model for my project, the very organization of the project. In this project, I saw how "Mustache" and database connection work, so I used it in my project, too. I implemented other functionalities based on what we did at the University.
 ## License
 
 Copyright © 2023 FIXME
