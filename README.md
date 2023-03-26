@@ -4,6 +4,7 @@ The goal of this project is to make web application with CRUD operations.
 
 The application uses Mustache logic-less templates for html pages, Clostache is Mustache for Clojure. Ring is used as a basic for this web application. It uses Compojure as routing library for Ring.
 Application should allow a user to create a new actor, update, delete, and read all the actors from database. It should also allow for creation of a new producer and cinema, update, delete and read all producers and cinemas from database. It also this web application should read all movies from database. 
+In this app we have statistic number data for movies, actors, producers and cinemas, also we have average price for all movies.
 
 ## User demo introduction
 
